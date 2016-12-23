@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-QCloudRTMP" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>QCloudRTMP</name>
+    <description>QCloudRTMP</description>
+    <author>qinjm</author>
+    <license>Apache 2.0 License</license>
+
+
+    <js-module name="QCloudRTMP" src="www/QCloudRTMP.js">
+        <clobbers target="QCloudRTMP" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="QCloudRTMP">
+                <param name="android-package" value="com.tx.play.PlayFactory" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/PlayFactory.java" target-dir="src/com/tx/play" />
+        <source-file src="src/android/Play.java" target-dir="src/com/tx/play" />
+        <source-file src="src/android/PlayActivity.java" target-dir="src/com/tx/play" />
+        <source-file src="src/android/LuPlayActivity.java" target-dir="src/com/tx/play" />
+        <source-file src="src/android/PlayTestActivity.java" target-dir="src/com/tx/play" />
+        <source-file src="src/android/QinR.java" target-dir="src/com/tx/play" />
+        <source-file src="src/android/boplay/BoPlay.java" target-dir="src/com/tx/play/boplay" />
+        <source-file src="src/android/luplay/LuPlay.java" target-dir="src/com/tx/play/luplay" />
+
+        <source-file src="src/android/libs/arm64-v8a/libBugly.so" target-dir="libs/arm64-v8a/"/>
+        <source-file src="src/android/libs/arm64-v8a/libtxrtmpsdk.so" target-dir="libs/arm64-v8a/"/>
+        <source-file src="src/android/libs/armeabi/libBugly.so" target-dir="libs/armeabi/"/>
+        <source-file src="src/android/libs/armeabi/libtxrtmpsdk.so" target-dir="libs/armeabi/"/>
+        <source-file src="src/android/libs/armeabi-v7a/libBugly.so" target-dir="libs/armeabi-v7a/"/>
+        <source-file src="src/android/libs/armeabi-v7a/libtxrtmpsdk.so" target-dir="libs/armeabi-v7a/"/>
+        <source-file src="src/android/libs/txrtmpsdk.jar" target-dir="libs/"/>
+
+        <!--视图-->
+        <source-file src="src/android/res/layout/activity_main.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/res/layout/activity_publish.xml" target-dir="res/layout/"/>
+        <!--静态资源-->
+        <source-file src="src/android/res/drawable/play_seekbar_progress.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/res/drawable/resolution_radio.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/res/drawable/seekbar_progress_drawable.xml" target-dir="res/drawable/"/>
+
+        <source-file src="src/android/res/drawable-xhdpi/adjust_mode.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/auto_bitrate.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/automatic.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/black_bkg.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/cache_time.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/camera_change.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/camera_change2.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/circle.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/close_press.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/face_beauty.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/fill_mode.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/fix_bitrate.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/flash_off.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/flash_on.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/landscape.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_animation.xml" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image0.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image1.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image2.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image3.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image4.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image5.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image6.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/loading_image7.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/manual.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/pause_publish.jpg" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/play_pause.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/play_seekbar_icon.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/play_start.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/portrait.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/quick.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/quick2.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/volumn_bg.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/volumn_front.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/volumn_primary.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/watermark.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/res/drawable-xhdpi/white_bkg.png" target-dir="res/drawable-xhdpi/"/>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.CALL_PHONE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.READ_LOGS" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.Camera"/>
+            <uses-feature android:name="android.hardware.camera.autofocus" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.tx.play.PlayActivity" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+            <activity android:name="com.tx.play.LuPlayActivity" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+        </config-file>
+    </platform>
+
+
+</plugin>
